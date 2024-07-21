@@ -1,0 +1,31 @@
+# rotate layout clockwise
+shift + alt - r : yabai -m space --rotate 270
+fn - i : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# change window focus within space
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+
+# stop/start/restart yabai
+shift + alt - q : yabai --stop-service
+shift + alt - s : yabai --start-service
+
+# maximize a window
+shift + alt - m : yabai -m window --toggle zoom-fullscreen
+
+# turn on terminal
+alt + shift - i : open -a "iterm"
+alt + shift - a : open -a "arc"
+
+# bluetooth 
+ctrl + shift - b : osascript -e 'do shell script "blueutil --power 1"' # turn on 
+ctrl + shift - n : osascript -e 'do shell script "blueutil --power 0"' # turn off
+
+# Delete a word backward (similar to pressing Option+Delete)
+ctrl - e : osascript -e 'tell application "System Events" to key code 51 using {option down}'
+
+
+
+
