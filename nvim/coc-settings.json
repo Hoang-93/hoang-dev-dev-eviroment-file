@@ -1,0 +1,12 @@
+{
+  "languageserver": {
+    "typescript": {
+      "command": "typescript-language-server",
+      "args": ["--stdio"],
+      "filetypes": ["typescript", "typescriptreact", "typescript.tsx"],
+      "initializationOptions": {
+        "hostInfo": "neovim"
+      }
+    }
+  }
+}

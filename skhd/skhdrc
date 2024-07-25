@@ -26,6 +26,6 @@ ctrl + shift - n : osascript -e 'do shell script "blueutil --power 0"' # turn of
 # Delete a word backward (similar to pressing Option+Delete)
 ctrl - e : osascript -e 'tell application "System Events" to key code 51 using {option down}'
 
-
-
-
+# Move the focused window to the secondary display
+alt - m : yabai -m window --display 2 && yabai -m display --focus 2 #feature
+alt - n : yabai -m window --display 1 && yabai -m display --focus 1 #feature
