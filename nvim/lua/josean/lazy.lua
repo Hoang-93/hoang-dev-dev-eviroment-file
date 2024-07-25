@@ -19,4 +19,9 @@ require("lazy").setup({ { import = "josean.plugins" }, { import = "josean.plugin
   change_detection = {
     notify = false,
   },
+  {
+    install = {
+      colorschema = { "sonokai" },
+    },
+  },
 })
