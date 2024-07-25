@@ -1,2 +1,2 @@
-require("josean.core.options")
-require("josean.core.keymaps")
+require("hoangdev.core.options")
+require("hoangdev.core.keymaps")
