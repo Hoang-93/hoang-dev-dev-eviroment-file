@@ -23,6 +23,12 @@ return {
             folder = {
               arrow_closed = "", -- arrow when folder is closed
               arrow_open = "", -- arrow when folder is open
+              default = "",
+              open = "",
+              empty = "",
+              empty_open = "",
+              symlink = "",
+              symlink_open = "",
             },
           },
         },
@@ -60,4 +66,3 @@ return {
     keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" }) -- refresh file explorer
   end,
 }
-

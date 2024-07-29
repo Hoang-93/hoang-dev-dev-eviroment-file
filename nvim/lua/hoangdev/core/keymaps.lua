@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.scriptendCoding = "utf-8"
 
 local keymap = vim.keymap -- for conciseness
 

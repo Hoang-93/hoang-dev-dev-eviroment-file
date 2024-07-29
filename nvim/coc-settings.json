@@ -5,8 +5,9 @@
       "args": ["--stdio"],
       "filetypes": ["typescript", "typescriptreact", "typescript.tsx"],
       "initializationOptions": {
-        "hostInfo": "neovim"
+        "hostinfo": "neovim"
       }
     }
-  }
+  },
+  "coc.preferences.spellCheckLanguages": ["en"]
 }
