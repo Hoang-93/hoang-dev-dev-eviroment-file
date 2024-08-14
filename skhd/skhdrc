@@ -19,8 +19,8 @@ shift + alt - m : yabai -m window --toggle zoom-fullscreen
 alt + shift - i : open -a "iterm"
 alt + shift - a : open -a "arc"
 
-# bluetooth 
-ctrl + shift - b : osascript -e 'do shell script "blueutil --power 1"' # turn on 
+# bluetooth
+ctrl + shift - b : osascript -e 'do shell script "blueutil --power 1"' # turn on
 ctrl + shift - n : osascript -e 'do shell script "blueutil --power 0"' # turn off
 
 # Delete a word backward (similar to pressing Option+Delete)
