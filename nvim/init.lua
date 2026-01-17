@@ -1,12 +1,15 @@
-require("hoangdev.core")
-require("hoangdev.lazy")
--- init.lua
+--[[
+   ______          __     ____                 __  ______ 
+  / ____/___  ____/ /__  / __ \____  _____    / / / / __ \
+ / /   / __ \/ __  / _ \/ / / / __ \/ ___/   / /_/ / / / /
+/ /___/ /_/ / /_/ /  __/ /_/ / /_/ (__  )   / __  / /_/ / 
+\____/\____/\__,_/\___/\____/ .___/____/   /_/ /_/\___\_\ 
+                           /_/
 
--- Thiết lập phương pháp fold theo indent
--- vim.o.foldmethod = "indent"
 
--- Toggle fold tại dòng hiện tại bằng <leader>z
--- vim.api.nvim_set_keymap("n", "<leader>z", ":set foldmethod=indent<CR>za", { noremap = true, silent = true })
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.foldlevelstart = 99 -- Optional: Set the starting fold level
+--]]
+
+
+require("config.options")
+require("config.keymaps")
+require("config.lazy")
