@@ -58,11 +58,28 @@ return {
     })
 
     -- set keymaps
-    local keymap = vim.keymap -- for conciseness
+    -- local keymap = vim.keymap -- for conciseness
 
-    keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
-    keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" }) -- toggle file explorer on current file
-    keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" }) -- collapse file explorer
-    keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" }) -- refresh file explorer
+    -- keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
+    -- keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" }) -- toggle file explorer on current file
+    -- keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" }) -- collapse file explorer
+    -- keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" }) -- refresh file explorer
+
+    -- vim.api.nvim_create_autocmd("BufEnter", {
+    --   nested = true,
+    --   callback = function()
+    --     if #vim.api.nvim_list_wins() == 1 and require("nvim-tree.utils").is_nvim_tree_buf() then
+    --       vim.cmd "quit"
+    --     end
+    --   end
+    -- })
+
+    -- vim.api.nvim_create_autocmd("VimResized", {
+    --   callback = function()
+    --     if require("nvim-tree.utils").is_nvim_tree_buf() then
+    --       require("nvim-tree.api").tree.reload()
+    --     end
+    --   end,
+    -- })
   end,
 }

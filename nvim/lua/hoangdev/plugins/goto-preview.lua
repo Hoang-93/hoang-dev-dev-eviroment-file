@@ -27,7 +27,11 @@ return {
       zindex = 1, -- Starting zindex for the stack of floating windows
     })
     local keymap = vim.keymap
-    keymap.set("n", "gpd", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", { noremap = true })
-    keymap.set("n", "gpi", "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>", { noremap = true })
+    vim.keymap.set("n", "gpd", require("goto-preview").goto_preview_definition, { desc = "Preview Definition" })
+    vim.keymap.set("n", "gpt", require("goto-preview").goto_preview_type_definition, { desc = "Preview Type Definition" })
+    vim.keymap.set("n", "gpi", require("goto-preview").goto_preview_implementation, { desc = "Preview Implementation" })
+    vim.keymap.set("n", "gpr", require("goto-preview").goto_preview_references, { desc = "Preview References" })
+    vim.keymap.set("n", "gP",  require("goto-preview").close_all_win, { desc = "Close All Previews" })
+
   end,
 }
