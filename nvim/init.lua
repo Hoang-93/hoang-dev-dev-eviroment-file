@@ -1,15 +1,6 @@
---[[
-   ______          __     ____                 __  ______ 
-  / ____/___  ____/ /__  / __ \____  _____    / / / / __ \
- / /   / __ \/ __  / _ \/ / / / __ \/ ___/   / /_/ / / / /
-/ /___/ /_/ / /_/ /  __/ /_/ / /_/ (__  )   / __  / /_/ / 
-\____/\____/\__,_/\___/\____/ .___/____/   /_/ /_/\___\_\ 
-                           /_/
+-- Bootstrap lazy.nvim
+require("config.lazy")
 
-
---]]
-
-
+-- Load configurations
 require("config.options")
 require("config.keymaps")
-require("config.lazy")

@@ -46,11 +46,11 @@ vim.opt.splitbelow = true
 --Use Spaces instad of taps
 vim.opt.expandtab = true
 -- size for spaces using << and >>
-vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 2
 -- size for spaces for tab
-vim.opt.tabstop = 4
+vim.opt.tabstop = 2
 -- how many spaces when prassing tab
-vim.opt.softtabstop = 4
+vim.opt.softtabstop = 2
 
 -- indetation opthions
 vim.opt.smarttab = true

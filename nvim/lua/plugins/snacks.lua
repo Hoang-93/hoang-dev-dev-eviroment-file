@@ -4,9 +4,9 @@ return {
   opts = {
     bigfile = { enabled = true },
     dashboard = {
-      enabled = true,
-      preset = {
-        header = [[
+  enabled = true,
+  preset = {
+    header = [[
                                               
        ████ ██████           █████      ██
       ███████████             █████ 
@@ -16,25 +16,22 @@ return {
   ███████████ ███    ███ █████████ █████ █████ ████ █████
  ██████  █████████████████████ ████ █████ █████ ████ ██████
       ]],
-      },
-      sections = {
-        { section = 'header' },
-        { section = "keys", indent = 1,gap = 1, padding = 1 },
-        { section = 'recent_files', icon = ' ', title = 'Recent Files', cwd = true, indent = 3, padding = 2 },
-        -- { icon = " ", title = "Projects", section = "projects", indent = 3, padding = 2 },
-        { section = "startup" },
-        { pane = 2, padding = 2 },
-        {
-          pane = 2,
-          section = "terminal",
-          -- cmd = "~/.config/nvim/img/ascii-image-converter ~/.config/nvim/img/CodeOpsHQLogoWithLightBackgraung.jpg -c -b --dither",
-         cmd = [[sh -c 'jp2a ~/.config/nvim/img/logo.jpg --width=65 --background=dark --chars=" .·,:;+*#" --fill']],
-          random = 10,
-          indent = 2,
-          height = 34,
-        }
-      },
+    keys = {
+      { icon = "󰱼 ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
+      { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
+      { icon = "󰒲 ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
+      { icon = "󰒲 ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
+      { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
+      { icon = "󰁯 ", key = "q", desc = "Quit", action = ":qa!" },
     },
+  },
+  sections = {
+    { section = "header" },
+    { section = "keys", gap = 1, padding = 1 },
+    { icon = '󰁯 ', title = 'Projects', section = 'projects', padding = 1, pane = 1, indent = 3, gap = 0.5},
+    { section = "startup" },
+  },
+},
     -- explorer = { enabled = true },
     image = { enabled = true },
     indent = { enabled = true },
@@ -45,7 +42,7 @@ return {
     -- git = { enabled = true },
     quickfile = { enabled = true },
     -- scope = { enabled = true },
-    -- scroll = { enabled = true },
+    scroll = { enabled = true },
     scratch = { enabled = true },
     -- statuscolumn = { enabled = true },
     terminal = { enabled = true },
@@ -61,7 +58,7 @@ return {
     { "[[",         function() Snacks.words.jump(-vim.v.count1) end, desc = "Prev Reference", mode = { "n", "t" } },
 
     -- Picker key maps
-    { "\\", function() Snacks.explorer() end, desc = "File Explorer" },
+    { "\\", "<cmd>NvimTreeToggle<CR>", desc = "File Explorer" },
     { "<leader>ss", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
     { "<leader><space>", function() Snacks.picker.buffers() end, desc = "[ ] Find existing buffers" },
     { "<leader>sg", function() Snacks.picker.grep() end, desc = "[S]earch by [G]rep" },
