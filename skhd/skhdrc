@@ -18,6 +18,8 @@ shift + alt - m : yabai -m window --toggle zoom-fullscreen
 # turn on terminal
 alt + shift - i : open -a "iterm"
 alt + shift - a : open -a "arc"
+alt + shift - o : open -a "Visual Studio Code"
+
 
 # bluetooth
 ctrl + shift - b : osascript -e 'do shell script "blueutil --power 1"' # turn on

@@ -1,56 +1,64 @@
+local opt = vim.opt
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
+
+-- (have to use iterm2 or any other true color terminal)
+opt.termguicolors = true
+opt.background = "dark" -- colorschemes that can be light or dark will be made dark
+
+-- backspace
+opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 
 -- Make line numbers default
-vim.opt.number = true
+opt.number = true
 -- Relative line numbers, to help with jumping.
-vim.opt.relativenumber = true
+opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
-vim.opt.mouse = 'a'
+opt.mouse = 'a'
 
 -- Don't show the mode, since it's already in the status line
-vim.opt.showmode = false
+opt.showmode = false
 
 -- Sync clipboard between OS and Neovim.
 vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
+  opt.clipboard = 'unnamedplus'
 end)
 
 -- Enable break indent
-vim.opt.breakindent = true
+opt.breakindent = true
 
 -- Save undo history
-vim.opt.undofile = true
+opt.undofile = true
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+opt.ignorecase = true
+opt.smartcase = true
 
 -- Keep signcolumn on by default
-vim.opt.signcolumn = 'yes'
+opt.signcolumn = 'yes'
 
 -- Decrease update time
-vim.opt.updatetime = 250
+opt.updatetime = 250
 
 -- Decrease mapped sequence wait time
-vim.opt.timeoutlen = 300
+opt.timeoutlen = 300
 
 -- Configure how new splits should be opened
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+opt.splitright = true
+opt.splitbelow = true
 
 --Use Spaces instad of taps
-vim.opt.expandtab = true
+opt.expandtab = true
 -- size for spaces using << and >>
-vim.opt.shiftwidth = 2
+opt.shiftwidth = 2
 -- size for spaces for tab
-vim.opt.tabstop = 2
+opt.tabstop = 2
 -- how many spaces when prassing tab
-vim.opt.softtabstop = 2
+opt.softtabstop = 2
 
 -- indetation opthions
 vim.opt.smarttab = true
